@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+        <link href='//fonts.googleapis.com/css?family=Roboto:200,400,600' rel='stylesheet' type='text/css'>
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Portfolio responsive complete</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Quentin Landon</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#timeline" class="nav__link">Timeline</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                    <h1 class="home__title"><span>HE</span><br>LLO.</h1>
+
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
+                    </div>
+
+                    <img src="assets/img/perfil.png" alt="" class="home__img">
+                </div>
+            </section>
+            
+            <!--===== ABOUT =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">About</h2>
+            
+                <div class="about__container bd-grid">
+                    <div class="video-slider">
+                        <input type="radio" name="video-slide" id="video1" checked>
+                        <input type="radio" name="video-slide" id="video2">
+                        <input type="radio" name="video-slide" id="video3">
+                        <div class="video-slide" id="slide1">
+                            <video controls>
+                                <source src="assets/vid/video_de.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-slide" id="slide2">
+                            <video controls>
+                                <source src="assets/vid/video_en.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-slide" id="slide3">
+                            <video controls>
+                                <source src="assets/vid/video_fr.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="slider-nav">
+                            <label for="video1"><img src="assets/img/de-flag.png" alt="French"></label>
+                            <label for="video2"><img src="assets/img/en-flag.png" alt="English"></label>
+                            <label for="video3"><img src="assets/img/fr-flag.png" alt="German"></label>
+                        </div>                        
+                    </div>
+            
+                    <div>
+                        <h2 class="about__subtitle">I'm am Quentin Landon</h2>
+                        <span class="about__profession">Embedded and digital systems engineer.</span>
+                        <p class="about__text">An engineer specializing in embedded systems and artificial intelligence (AI). I invite you to take a look at my introductory video to get a glimpse into what I do and how my expertise can benefit you. Afterward, feel free to explore my portfolio for more detailed insights into my projects and capabilities.</p>
+            
+                        <div class="about__social">
+                            <a href="https://www.linkedin.com/in/quentin-landon-4582a1210/" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                            <a href="https://github.com/qlandon" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="scroller" data-direction="right" data-speed="slow">
+                <div class="scroller__inner">
+                    <img src="assets/img/dut.png" alt="">
+                    <img src="assets/img/estaca.png" alt="">
+                    <img src="assets/img/isae.png" alt="">
+                    <img src="assets/img/stellantis.png" alt="">
+                    <img src="assets/img/punch.jpeg" alt="">
+                    <img src="assets/img/dut.png" alt="">
+                    <img src="assets/img/estaca.png" alt="">
+                    <img src="assets/img/isae.png" alt="">
+                    <img src="assets/img/stellantis.png" alt="">
+                    <img src="assets/img/punch.jpeg" alt="">
+                </div>
+            </div>
+
+            <!--===== timeline =====-->
+            <section class="Timeline" id="timeline">
+                <h2 class="section-title">Timeline</h2>
+  
+                <div class="timeline">
+                    <div class="timeline-object complete" id = "dut">
+                      <div class="timeline-status"></div>
+                      <div class="timeline-content">
+                            <h3>Bachelor's degree</h3>
+                            <span>2017 - 2020 | LOUIS PASTEUR (High School) | Strasbourg</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-object complete">
+                      <div class="timeline-status"></div>
+                      <div class="timeline-content">
+                        <h3>University diploma of technology in physical measurement</h3>
+                        <span>2020 - 2022 | IUT LOUIS PASTEUR | Strasbourg</span>
+                      </div>
+                    </div>
+
+                    <div class="timeline-object complete">
+                        <div class="timeline-status"></div>
+                        <div class="timeline-content">
+                          <h3>Intern within Quality Department </h3>
+                          <span>2021 - 2022 | PUNCHPOWERGLIDE | Strasbourg </span>
+                        </div>
+                      </div>
+
+                    <div class="timeline-object">
+                        <div class="timeline-status"></div>
+                        <div class="timeline-content">
+                          <h3>Engineer "Embedded and Digital Systems: Autonomous and Connected Vehicles"</h3>
+                          <span>2022 - 2025 | ESTACA | Paris </span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-object">
+                        <div class="timeline-status"></div>
+                        <div class="timeline-content">
+                          <h3>Intern as Engineer in regulation and homologation of autonomous vehicle</h3>
+                          <span>2022 - 2025 | STELLANTIS | Paris </span>
+                        </div>
+                    </div>  
+
+                    <div class="timeline-object">
+                      <div class="timeline-status"></div>
+                      <div class="timeline-content">
+                        <h3>Diploma and end of apprenticeship contract</h3>
+                        <span>August 2025</span>
+                      </div>
+                    </div>
+                  </div>
+
+            </section>
+            <!--===== timeline =====-->
+              
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">
+                    <div class="skills__box">
+                        <h3 class="skills__subtitle">Development</h3>
+                        <span class="skills__name">Python</span>
+                        <span class="skills__name">C, C++, ada..</span>
+                        
+                        <h3 class="skills__subtitle">Software</h3>
+                        <span class="skills__name">IDE</span>
+                        <span class="skills__name">Git</span>
+                        <span class="skills__name">Linux</span>
+                        <span class="skills__name">Vector</span>
+                        <span class="skills__name">Simulink</span>
+                        <span class="skills__name">RTmap</span>
+
+                        <h3 class="skills__subtitle">IA</h3>
+                        <span class="skills__name">Deep learning (CNN,..)</span>
+                        <span class="skills__name">Tensorflow, ..</span>
+                        <span class="skills__name">Machine learning, (un)supervised ..</span>
+
+
+                        <h3 class="skills__subtitle">Embedded</h3>
+                        <span class="skills__name">Linux real time</span>
+                        <span class="skills__name">Linux embedded</span>
+                        <span class="skills__name">Electronics, raspberrypi ..</span>
+
+                        <h3 class="skills__subtitle">Sensors</h3>
+                        <span class="skills__name">Sensors fusion</span>
+                        <span class="skills__name">Lidar, radar ..</span>
+                        <span class="skills__name">Slam, mapping, yolo..</span>
+                    </div>
+
+                    <div class="skills__img">
+                        <img src="assets/img/coding-gif-.gif" alt="">
+                    </div>
+         
+                </div>
+            </section>
+
+            <!--===== PORTFOLIO =====-->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section-title">Portfolio</h2>
+
+                <div class="portfolio__container bd-grid">
+                    <div class="portfolio__img">
+                        <img src="assets/img/projet1.png" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="https://github.com/qlandon/Tello_DRONE" class="portfolio__link-name"><center><b>Development of a visual-inertial dynamic SLAM, the project was implemented in Simulink, and then in C++ using ROS/ORB-SLAM3 on ubuntu 20.04.5.</b></center> </a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work2.jpg" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">View details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work3.jpg" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">View details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work4.jpg" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">View details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work5.jpg" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">View details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work6.jpg" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">View details</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">EMAIL</h3>
+                        <span class="contact__text">quentinlandon18@gmail.com</span>
+
+                        <h3 class="contact__subtitle">PHONE</h3>
+                        <span class="contact__text">06.19.36.75.12</span>
+
+                        <h3 class="contact__subtitle">ADRESS</h3>
+                        <span class="contact__text">France, Paris / Strasbourg</span>
+                    </div>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <input type="text" placeholder="Name" class="contact__input">
+                            <input type="mail" placeholder="Email" class="contact__input">
+                        </div>
+
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+
+                        <input type="submit" value="Enviar" class="contact__button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">Quentin LANDON</h2>
+                    <p class="footer__text">I'm Quentin landon and this is my personal website</p>
+                </div>
+
+                <div class="footer__data">
+                    <h2 class="footer__title">EXPLORE</h2>
+                    <ul>
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#skills" class="footer__link">Skills</a></li>
+                        <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                        <li><a href="#Contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__data">
+                    <h2 class="footer__title">FOLLOW</h2>
+                    <a href="https://www.linkedin.com/in/quentin-landon-4582a1210/" class="footer__social"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="https://github.com/qlandon" class="footer__social"><i class='bx bxl-github' ></i></a>
+                </div>
+
+
+            </div>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.about__video-carousel').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                    nextArrow: '<button type="button" class="slick-next">Next</button>',
+                    autoplay: false,
+                    autoplaySpeed: 2000
+                });
+            });
+        </script>
+        
+    </body>
+</html>
