@@ -1,1 +1,0 @@
-# quentinlandon.github.io
