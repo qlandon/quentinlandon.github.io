@@ -112,27 +112,6 @@ const fs = require("fs");
 const FormData = require("form-data");
 const formData = new FormData();
 
-formData.append(
-  "file",
-  fs.createReadStream("assets/img/Quentin.pdf")
-);
-
-const options = {
-  headers: {
-    "x-api-key": "sec_bTXMrSoX6Aa62uuQEHS7hzdSgFQuBryj",
-    ...formData.getHeaders(),
-  },
-};
-
-axios
-  .post("https://api.chatpdf.com/v1/sources/add-file", formData, options)
-  .then((response) => {
-    console.log("Source ID:", response.data.sourceId);
-  })
-  .catch((error) => {
-    console.log("Error:", error.message);
-    console.log("Response:", error.response.data);
-  });
 // Fonction pour envoyer la question à l'API et afficher la réponse
 function sendQuestion() {
     // Récupérer la question de l'utilisateur depuis l'input
@@ -141,7 +120,7 @@ function sendQuestion() {
     // Envoyer la question à l'API ChatPDF
     const chatData = {
         stream: false,
-        sourceId: "src_xxxxxx", // Remplacez "src_xxxxxx" par l'ID de votre source
+        sourceId: "src_3pAmeE6t9y1AaK1uQ4bie", // Remplacez "src_xxxxxx" par l'ID de votre source
         messages: [
             {
                 role: "user",
