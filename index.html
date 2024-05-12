@@ -384,8 +384,10 @@
             // Fonction pour envoyer la question à l'API et afficher la réponse
             function sendQuestion() {
                 // Récupérer la question de l'utilisateur depuis l'input
+                
                 const question = document.getElementById("user-input").value;
                 const chatBox = document.getElementById("chat-box");
+            
                 const config = {
                     headers: {
                     "x-api-key": "sec_bTXMrSoX6Aa62uuQEHS7hzdSgFQuBryj}",
@@ -394,7 +396,7 @@
                 };
                 // Envoyer la question à l'API ChatPDF
                 const data = {
-                    sourceId: "src_smMZgZRUavk3O4e8vPjjQ", // Remplacez "src_xxxxxx" par l'ID de votre source
+                    sourceId: "src_smMZgZRUavk3O4e8vPjjQ", 
                     messages: [
                         {
                             role: "user",
@@ -408,7 +410,6 @@
                 .then((response) => {
                     // Afficher la réponse dans le chat-box
                     chatBox.innerHTML += `<div class="bot-message">${response.data.content}</div>`;
-                    console.log("Result:", response.data.content);
                 })
                 .catch((error) => {
                     console.error("Erreur:", error.message);
