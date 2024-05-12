@@ -391,11 +391,10 @@
                     "x-api-key": "sec_bTXMrSoX6Aa62uuQEHS7hzdSgFQuBryj}",
                     "Content-Type": "application/json",
                     },
-                    responseType: "stream",
                 };
                 // Envoyer la question à l'API ChatPDF
-                const chatData = {
-                    sourceId: "src_L6anIlgIvnjMotvpFeN9j", // Remplacez "src_xxxxxx" par l'ID de votre source
+                const data = {
+                    sourceId: "src_smMZgZRUavk3O4e8vPjjQ", // Remplacez "src_xxxxxx" par l'ID de votre source
                     messages: [
                         {
                             role: "user",
@@ -405,10 +404,11 @@
                 };
 
                 axios
-                .post("https://api.chatpdf.com/v1/chats/message", chatData, config)
+                .post("https://api.chatpdf.com/v1/chats/message", data, config)
                 .then((response) => {
                     // Afficher la réponse dans le chat-box
                     chatBox.innerHTML += `<div class="bot-message">${response.data.content}</div>`;
+                    console.log("Result:", response.data.content);
                 })
                 .catch((error) => {
                     console.error("Erreur:", error.message);
