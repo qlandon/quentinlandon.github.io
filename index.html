@@ -374,6 +374,49 @@
                 });
             });
         </script>
+
+        <script>
+            /*chatgpt*/
+
+            const axios = require("axios");
+
+
+            // Fonction pour envoyer la question à l'API et afficher la réponse
+            function sendQuestion() {
+                // Récupérer la question de l'utilisateur depuis l'input
+                const question = document.getElementById("user-input").value;
+                const chatBox = document.getElementById("chat-box");
+                const config = {
+                    headers: {
+                    "x-api-key": "sec_bTXMrSoX6Aa62uuQEHS7hzdSgFQuBryj}",
+                    "Content-Type": "application/json",
+                    },
+                    responseType: "stream",
+                };
+                // Envoyer la question à l'API ChatPDF
+                const chatData = {
+                    sourceId: "src_L6anIlgIvnjMotvpFeN9j", // Remplacez "src_xxxxxx" par l'ID de votre source
+                    messages: [
+                        {
+                            role: "user",
+                            content: question,
+                        },
+                    ],
+                };
+
+                axios
+                .post("https://api.chatpdf.com/v1/chats/message", chatData, config)
+                .then((response) => {
+                    // Afficher la réponse dans le chat-box
+                    chatBox.innerHTML += `<div class="bot-message">${response.data.content}</div>`;
+                })
+                .catch((error) => {
+                    console.error("Erreur:", error.message);
+                });
+            }
+
+
+        </script>
         
     </body>
 </html>

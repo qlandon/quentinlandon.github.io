@@ -105,43 +105,4 @@ function addAnimation() {
   });
 }
 
-/*chatgpt*/
 
-const axios = require("axios");
-const fs = require("fs");
-const FormData = require("form-data");
-const formData = new FormData();
-
-// Fonction pour envoyer la question à l'API et afficher la réponse
-function sendQuestion() {
-    // Récupérer la question de l'utilisateur depuis l'input
-    const question = document.getElementById("user-input").value;
-
-    // Envoyer la question à l'API ChatPDF
-    const chatData = {
-        stream: false,
-        sourceId: "src_3pAmeE6t9y1AaK1uQ4bie", // Remplacez "src_xxxxxx" par l'ID de votre source
-        messages: [
-            {
-                role: "user",
-                content: question,
-            },
-        ],
-    };
-
-    axios.post("https://api.chatpdf.com/v1/chats/message", chatData, {
-        headers: {
-            "x-api-key": "sec_bTXMrSoX6Aa62uuQEHS7hzdSgFQuBryj", // Remplacez "sec_bTXMrSoX6Aa62uuQEHS7hzdSgFQuBryj" par votre clé API
-            "Content-Type": "application/json",
-        },
-    })
-    .then((response) => {
-        // Afficher la réponse dans le chat-box
-        const chatBox = document.getElementById("chat-box");
-        chatBox.innerHTML += `<div class="user-message">${question}</div>`;
-        chatBox.innerHTML += `<div class="bot-message">${response.data.content}</div>`;
-    })
-    .catch((error) => {
-        console.error("Erreur:", error.message);
-    });
-}
