@@ -105,4 +105,24 @@ function addAnimation() {
   });
 }
 
-
+/*DIPLOMA */
+document.addEventListener('DOMContentLoaded', function () {
+    var modals = document.querySelectorAll('.modal');
+    var thumbnails = document.querySelectorAll('.thumbnail');
+    var closeButtons = document.querySelectorAll('.close');
+  
+    thumbnails.forEach(function (thumbnail, index) {
+      thumbnail.addEventListener('click', function () {
+        modals[index].style.display = 'block';
+      });
+    });
+  
+    closeButtons.forEach(function (closeButton) {
+      closeButton.addEventListener('click', function () {
+        modals.forEach(function (modal) {
+          modal.style.display = 'none';
+        });
+      });
+    });
+  });
+  
