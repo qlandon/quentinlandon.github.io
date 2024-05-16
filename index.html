@@ -1,440 +1,1200 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- ===== CSS ===== -->
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-        <link href='//fonts.googleapis.com/css?family=Roboto:200,400,600' rel='stylesheet' type='text/css'>
+<html lang="en">
 
-        <!-- ===== BOX ICONS ===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-        <title>Portfolio responsive complete</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Quentin Landon</a>
-                </div>
+    <title>Quentin Landon - Personal Portfolio Website</title>
+    <meta name="keywords"
+        content="personal portfolio, cv, resume, developer, freelancer, modern, one page portfolio, onepage, personal portfolio, responsive, resume, vcard">
+    <meta name="description" content="Quentin Landon Best personal portfolio">
+    <meta name="author" content="Quentin Landon">
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#timeline" class="nav__link">Timeline</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+    <!-- site Favicon -->
+    <!-- <link rel="icon" href="assets/img/favicon/favicon.png" sizes="32x32"> -->
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
+    <!-- css All Plugins Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/animate.css">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/plugins/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/aos.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/owl.carousel.min.css">
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home" id="home">
-                <div class="home__container bd-grid">
-                    <h1 class="home__title"><span>HE</span><br>LLO.</h1>
+    <!-- Main Style -->
+    <link rel="stylesheet" id="main_style" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src=""></script>
 
-                    <div class="home__scroll">
-                        <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
+</head>
+
+<body class="body-bg">
+
+    <!-- Loader -->
+    <!-- <div id="bx-overlay">
+        <span class="loader"> </span>
+    </div> -->
+
+    <!-- Header section -->
+    <header class="bg bx-static">
+        <div class="container">
+            <div class="nav-sec padding-b-50">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+     
+                        <a class="navbar-brand" href="index.html"> <h2>QL</h2></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav" id="top-menu">
+                                <li class="nav-item active">
+                                    <a class="nav-link bx-nav" aria-current="page" href="#home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bx-nav" href="#about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bx-nav" href="#achievements">Achievements</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bx-nav" href="#skills">Skills</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bx-nav" href="#portfolio">Portfolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bx-nav" href="#contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                   
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home section -->
+    <section id="home" class="bx-home home-section bx-section padding-tb-80 bg-shape-hero">
+        <img id="shape1" class="parallax" src="assets/img/bg/shape-1.png" alt="shape">
+        <img id="shape2" class="parallax top" src="assets/img/bg/shape-2.png" alt="shape">
+        <img id="shape3" class="parallax left top" src="assets/img/bg/shape-3.png" alt="shape">
+        <img id="shape5" class="parallax bottom" src="assets/img/bg/shape-5.png" alt="shape">
+        <div class="container p-0">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="basic-details" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="info">
+                            <span class="primary-color">HELLO.</span>
+                            <h1>Quentin Landon</h1>
+                            <h2>Embedded and digital systems engineer.</h2>
+                            <div class="buttons">
+                                <a class="custom-btn bx-btn" href="#contact">Hire Me</a>
+                            </div>
+                            <div class="header-chatbot-form">
+                                <div class="search">
+                                    
+                                        <input type="text" class="searchTerm form-control"  placeholder="Ask your question about quentin...">
+                                    <button type="submit" class="searchButton">
+                                        <i class="fa-solid fa-rocket"></i>
+                                   </button>
+                                    
+                                 </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <img src="assets/img/perfil.png" alt="" class="home__img">
                 </div>
-            </section>
-            
-            <!--===== ABOUT =====-->
-            <section class="about section" id="about">
-                <h2 class="section-title">About</h2>
-            
-                <div class="about__container bd-grid">
-                    <div class="video-slider">
-                        <input type="radio" name="video-slide" id="video1" checked>
-                        <input type="radio" name="video-slide" id="video2">
-                        <input type="radio" name="video-slide" id="video3">
-                        <div class="video-slide" id="slide1">
-                            <video controls>
-                                <source src="assets/vid/video_de.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="video-slide" id="slide2">
-                            <video controls>
-                                <source src="assets/vid/video_en.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="video-slide" id="slide3">
-                            <video controls>
-                                <source src="assets/vid/video_fr.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="slider-nav">
-                            <label for="video1"><img src="assets/img/de-flag.png" alt="French"></label>
-                            <label for="video2"><img src="assets/img/en-flag.png" alt="English"></label>
-                            <label for="video3"><img src="assets/img/fr-flag.png" alt="German"></label>
-                        </div>                        
-                    </div>
-            
-                    <div>
-                        <h2 class="about__subtitle">I'm am Quentin Landon</h2>
-                        <span class="about__profession">Embedded and digital systems engineer.</span>
-                        <p class="about__text">An engineer specializing in embedded systems and artificial intelligence (AI). I invite you to take a look at my introductory video to get a glimpse into what I do and how my expertise can benefit you. Afterward, feel free to explore my portfolio for more detailed insights into my projects and capabilities.</p>
-            
-                        <div class="about__social">
-                            <a href="https://www.linkedin.com/in/quentin-landon-4582a1210/" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
-                            <a href="https://github.com/qlandon" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                <div class="col-md-6">
+                    <div class="profile-img" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="profile-detail">
+                            <img src="assets/img/bg/home.png" alt="">
                         </div>
                     </div>
-                </div>
-            </section>
-            
-            <div class="scroller" data-direction="right" data-speed="slow">
-                <div class="scroller__inner">
-                    <img src="assets/img/dut.png" alt="">
-                    <img src="assets/img/estaca.png" alt="">
-                    <img src="assets/img/isae.png" alt="">
-                    <img src="assets/img/stellantis.png" alt="">
-                    <img src="assets/img/punch.jpeg" alt="">
-                    <img src="assets/img/dut.png" alt="">
-                    <img src="assets/img/estaca.png" alt="">
-                    <img src="assets/img/isae.png" alt="">
-                    <img src="assets/img/stellantis.png" alt="">
-                    <img src="assets/img/punch.jpeg" alt="">
                 </div>
             </div>
-            <!--===== chatgpt =====-->
-            <div class="container">
-                <h1>ChatGPT</h1>
-                <div class="chat-container">
-                    <input type="text" id="user-input" placeholder="Posez une question...">
-                    <button onclick="sendQuestion()">Envoyer</button>
-                    <div id="chat-box"></div>
+        </div>
+    </section>
+    <!-- Home section End -->
+
+
+
+    <!-- Start About section -->
+    <section id="about" class="bx-about-section bx-section padding-b-80">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="title" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                    <h2>About<span class="primary-clr"> Us</span></h2>
+                </div>
+                <div class="col-md-12 col-lg-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                    <div class="about-box">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="germany" role="tabpanel"
+                                aria-labelledby="germany-tab">
+                                <video controls src="assets/img/about/germany/video_de.mp4"></video>
+                            </div>
+                            <div class="tab-pane fade" id="england" role="tabpanel" aria-labelledby="england-tab">
+                                <video controls src="assets/img/about/england/video_en.mp4"></video>
+                            </div>
+                            <div class="tab-pane fade" id="france" role="tabpanel" aria-labelledby="france-tab">
+                                <video controls src="assets/img/about/france/video_fr.mp4"></video>
+                            </div>
+                        </div>
+                        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="germany-tab" data-bs-toggle="tab"
+                                    data-bs-target="#germany" type="button" role="tab" aria-controls="germany"
+                                    aria-selected="true">
+                                    <img class="about_flag" src="assets/img/about/germany/de-flag.png" alt="">
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="england-tab" data-bs-toggle="tab" data-bs-target="#england"
+                                    type="button" role="tab" aria-controls="england" aria-selected="false">
+                                    <img class="about_flag" src="assets/img/about/england/en-flag.png" alt="">
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="france-tab" data-bs-toggle="tab" data-bs-target="#france"
+                                    type="button" role="tab" aria-controls="france" aria-selected="false">
+                                    <img class="about_flag" src="assets/img/about/france/fr-flag.png" alt="">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                   <div class="about-box">
+                    <div class="detailed-content" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
+                        <div class="personal_title">
+                            <h2>I'm am Quentin Landon </h2>
+                            <p><b>Embedded and digital systems engineer.</b></p>
+                            <p>An engineer specializing in embedded systems and artificial intelligence (AI). I invite
+                                you to take a look at my introductory video to get a glimpse into what I do and how my
+                                expertise can benefit you. Afterward, feel free to explore my portfolio for more
+                                detailed insights into my projects and capabilities. </p>
+                        </div>
+
+                        <div class="social_icon">
+                            <a href="https://www.linkedin.com/in/quentin-landon-4582a1210/"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/qlandon"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                   </div>
                 </div>
             </div>
-            <!--===== chatgpt =====-->
-            
-            <!--===== timeline =====-->
-            <section class="Timeline" id="timeline">
-                <h2 class="section-title">Timeline</h2>
-  
-                <div class="timeline">
-                    <div class="timeline-object complete" id = "dut">
-                      <div class="timeline-status"></div>
-                      <div class="timeline-content">
-                            <h3>Bachelor's degree</h3>
-                            <span>2017 - 2020 | LOUIS PASTEUR (High School) | Strasbourg</span>
-                        </div>
-                    </div>
+        </div>
+    </section>
+    <!-- End About section -->
 
-                    <div class="timeline-object complete">
-                      <div class="timeline-status"></div>
-                      <div class="timeline-content">
-                        <h3>University diploma of technology in physical measurement</h3>
-                        <span>2020 - 2022 | IUT LOUIS PASTEUR | Strasbourg</span>
-                      </div>
-                    </div>
-
-                    <div class="timeline-object complete">
-                        <div class="timeline-status"></div>
-                        <div class="timeline-content">
-                          <h3>Intern within Quality Department </h3>
-                          <span>2021 - 2022 | PUNCHPOWERGLIDE | Strasbourg </span>
-                        </div>
-                      </div>
-
-                    <div class="timeline-object">
-                        <div class="timeline-status"></div>
-                        <div class="timeline-content">
-                          <h3>Engineer "Embedded and Digital Systems: Autonomous and Connected Vehicles"</h3>
-                          <span>2022 - 2025 | ESTACA | Paris </span>
-                        </div>
-                    </div>
-
-                    <div class="timeline-object">
-                        <div class="timeline-status"></div>
-                        <div class="timeline-content">
-                          <h3>Intern as Engineer in regulation and homologation of autonomous vehicle</h3>
-                          <span>2022 - 2025 | STELLANTIS | Paris </span>
-                        </div>
-                    </div>  
-
-                    <div class="timeline-object">
-                      <div class="timeline-status"></div>
-                      <div class="timeline-content">
-                        <h3>Diploma and end of apprenticeship contract</h3>
-                        <span>August 2025</span>
-                      </div>
-                    </div>
-                  </div>
-
-            </section>
-            <!--===== timeline =====-->
-              
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">
-                    <div class="skills__box">
-                        <h3 class="skills__subtitle">Applied Mathematics</h3>
-                        <span class="skills__name">Applied Mathematics</span>
-                        <span class="skills__name">Statistics for Artificial Intelligence</span>
-                        <span class="skills__name">Optimization and Decision Support</span>
-                        
-                        <h3 class="skills__subtitle">Computer Science</h3>
-                        <span class="skills__name">Python</span>
-                        <span class="skills__name">C/C++</span>
-                        <span class="skills__name">Matlab</span>
-                        <span class="skills__name">Linux</span>
-                        <span class="skills__name">Introduction to Cybersecurity</span>
-
-                        <h3 class="skills__subtitle">Sensors and Measurement</h3>
-                        <span class="skills__name">Sensor / Measurement Chain</span>
-                        <span class="skills__name">VA Sensors (radar, lidar, camera)</span>
-                        <span class="skills__name">Signal Processing (analog, digital)</span>
-                        <span class="skills__name">Sensor Data Fusion</span>
-
-                        <h3 class="skills__subtitle">Mechanical and Vehicle Dynamics</h3>
-                        <span class="skills__name">Solid Mechanics and Mechanical Systems</span>
-                        <span class="skills__name">Vehicle Dynamics</span>
-                        <span class="skills__name">Automotive Architecture</span>
-
-                        <h3 class="skills__subtitle">Electricity and Electronics</h3>
-                        <span class="skills__name">Electricity</span>
-                        <span class="skills__name">Digital Electronics</span>
-
-                        <h3 class="skills__subtitle">Automotive Technologies</h3>
-                        <span class="skills__name">Automotive Engine Technologies / New Powertrains: Hybridization and Electrification, Hydrogen</span>
-                        <span class="skills__name">Automotive Functional Safety (Reliability)</span>
-                        <span class="skills__name">Embedded Systems (CAN and FLEXRAY)</span>
-                        <span class="skills__name">Multiphysics Modeling</span>
-                        <span class="skills__name">Modeling and Code Generation and Testing</span>
-                        <span class="skills__name">Advanced Multiphysical Systems Modeling (Actuators)</span>
-                        <span class="skills__name">IoT (communication infrastructure/inter-vehicle)</span>
-
-                        <h3 class="skills__subtitle">AI and Machine Learning</h3>
-                        <span class="skills__name">AI: Machine Learning, Deep Learning, Reinforcement Learning</span>
-                        <span class="skills__name">ADAS (Advanced Driver Assistance Systems)</span>
-
-                        <h3 class="skills__subtitle">Other Skills</h3>
-                        <span class="skills__name">Big Data (Introduction to Data Storage, Finding Parking Spaces)</span>
-                        <span class="skills__name">Cybersecurity</span>
-                        <span class="skills__name">Microcontroller: Electronics for Embedded Calculators and Software</span>
-                        <span class="skills__name">AUTOSAR (Embedded System Design Standard)</span>
-                    </div>
-
-                    <div class="skills__img">
-                        <img src="assets/img/coding-gif-.gif" alt="">
-                    </div>
-            
+    <!-- Strat Slider Section -->
+    <section class="slider" id="slider" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+        <div class="slider_box">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="assets/img/slider/dut.png" alt="">
                 </div>
-            </section>
-            <!--===== SKILLS =====-->
+                <div class="item">
+                    <img src="assets/img/slider/estaca.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="assets/img/slider/isae.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="assets/img/slider/stellantis.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="assets/img/slider/punch.jpeg" alt="">
+                </div>
+                <div class="item">
+                    <img src="assets/img/slider/dut.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="assets/img/slider/estaca.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="assets/img/slider/isae.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="assets/img/slider/stellantis.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="assets/img/slider/punch.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Slider Section End-->
 
-
-            <!--===== PORTFOLIO =====-->
-            <section class="portfolio section" id="portfolio">
-                <h2 class="section-title">Portfolio</h2>
-
-                <div class="portfolio__container bd-grid">
-                    <div class="portfolio__img">
-                        <img src="assets/img/projet1.png" alt="">
-
-                        <div class="portfolio__link">
-                            <a href="https://github.com/qlandon/Tello_DRONE" class="portfolio__link-name"><center><b>Development of a visual-inertial dynamic SLAM, the project was implemented in Simulink, and then in C++ using ROS/ORB-SLAM3 on ubuntu 20.04.5.</b></center> </a>
-                        </div>
-                    </div>
-                    <div class="portfolio__img">
-                        <img src="assets/img/work2.jpg" alt="">
-
-                        <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div>
-                    <div class="portfolio__img">
-                        <img src="assets/img/work3.jpg" alt="">
-
-                        <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div>
-                    <div class="portfolio__img">
-                        <img src="assets/img/work4.jpg" alt="">
-
-                        <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div>
-                    <div class="portfolio__img">
-                        <img src="assets/img/work5.jpg" alt="">
-
-                        <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div>
-                    <div class="portfolio__img">
-                        <img src="assets/img/work6.jpg" alt="">
-
-                        <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
-                        </div>
+    <!-- Start axperience & Education section -->
+    <section id="achievements" class="bx-experience-section bx-section padding-tb-80">
+        <div class="container">
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
+            <div class="row mb-m-30">
+                <div class="title" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                    <h2>My<span class="primary-clr"> achievements</span></h2>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="education bx-box" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                        <ul class="timeline">
+                            <li class="timeline-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-info">
+                                        <span>2017 - 2020 </span>
+                                    </div>
+                                    <h5 class="timeline-title">Bachelor's degree <span class="sub"> - Strasbourg</span>
+                                    </h5>
+                                    <p> LOUIS PASTEUR (High School)</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-info">
+                                        <span>2020 - 2022</span>
+                                    </div>
+                                    <h5 class="timeline-title">University diploma of technology in physical measurement
+                                        <span class="sub"> - Strasbourg</span></h5>
+                                    <p>IUT LOUIS PASTEUR</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-info">
+                                        <span>2021 - 2022</span>
+                                    </div>
+                                    <h5 class="timeline-title">Intern within Quality Department
+                                        <span class="sub"> - Strasbourg</span></h5>
+                                    <p>PUNCH POWERGLIDE </p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="experience bx-box" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                        <ul class="timeline">
+                            <li class="timeline-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-info">
+                                        <span>2022 - 2025</span>
+                                    </div>
+                                    <h5 class="timeline-title">Engineer "Embedded and Digital Systems: Autonomous and
+                                        Connected Vehicles"
+                                        <span class="sub"> - Paris</span></h5>
+                                    <p>ESTACA </p>
+                                </div>
+                            </li>
+                            <li class="timeline-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-info">
+                                        <span>2022 - 2025</span>
+                                    </div>
+                                    <h5 class="timeline-title">Intern as Engineer in regulation and homologation of
+                                        autonomous vehicle
+                                        <span class="sub"> - Paris</span>
+                                    </h5>
+                                    <p>STELLANTIS </p>
+                                </div>
+                            </li>
+                            <li class="timeline-item" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-info">
+                                        <span>August 2025</span>
+                                    </div>
+                                    <h5 class="timeline-title">Diploma and end of apprenticeship contract
 
-            <!--===== diploma =====-->
-            <div class="gallery">
-                <div class="image-container">
-                  <img src="assets/img/DUT.jpg" alt="Diplôme 1" class="thumbnail">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img src="assets/img/DUT.jpg" alt="Diplôme 1" class="full-image">
-                  </div>
-                </div>
-                <div class="image-container">
-                  <img src="assets/img/DUT.jpg" alt="Diplôme 2" class="thumbnail">
-                  <div class="modal">
-                    <span class="close">&times;</span>
-                    <img src="assets/img/DUT.jpg" alt="Diplôme 2" class="full-image">
-                  </div>
-                </div>
+                                    </h5>
 
-            <!--===== diploma =====-->
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <div class="contact__info">
-                        <h3 class="contact__subtitle">EMAIL</h3>
-                        <span class="contact__text">quentinlandon18@gmail.com</span>
-
-                        <h3 class="contact__subtitle">PHONE</h3>
-                        <span class="contact__text">06.19.36.75.12</span>
-
-                        <h3 class="contact__subtitle">ADRESS</h3>
-                        <span class="contact__text">France, Paris / Strasbourg</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End achievements & Education Section -->
 
-                    <form action="" class="contact__form">
-                        <div class="contact__inputs">
-                            <input type="text" placeholder="Name" class="contact__input">
-                            <input type="mail" placeholder="Email" class="contact__input">
+    <!-- Strat Skills Section -->
+    <section id="skills" class="bx-experience-section bx-section padding-tb-80 skills">
+        <div class="container">
+            <div class="row mb-m-30">
+                <div class="title" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                    <h2>My<span class="primary-clr"> Skills</span></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                    <div class="skills-box">
+                        <div class="skills-title">
+                            <h2>Applied Mathematics</h2>
+                        </div>
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Applied Mathematics</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Statistics for Artificial Intelligence</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
 
-                        <input type="submit" value="Enviar" class="contact__button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer section">
-            <div class="footer__container bd-grid">
-                <div class="footer__data">
-                    <h2 class="footer__title">Quentin LANDON</h2>
-                    <p class="footer__text">I'm Quentin landon and this is my personal website</p>
-                </div>
-
-                <div class="footer__data">
-                    <h2 class="footer__title">EXPLORE</h2>
-                    <ul>
-                        <li><a href="#home" class="footer__link">Home</a></li>
-                        <li><a href="#about" class="footer__link">About</a></li>
-                        <li><a href="#skills" class="footer__link">Skills</a></li>
-                        <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
-                        <li><a href="#Contact" class="footer__link">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer__data">
-                    <h2 class="footer__title">FOLLOW</h2>
-                    <a href="https://www.linkedin.com/in/quentin-landon-4582a1210/" class="footer__social"><i class='bx bxl-linkedin' ></i></a>
-                    <a href="https://github.com/qlandon" class="footer__social"><i class='bx bxl-github' ></i></a>
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Optimization and Decision Support</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
+                    <div class="skills-box">
+                        <div class="skills-title">
+                            <h2>Computer Science</h2>
+                        </div>
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Python</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">C/C++</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Matlab</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Matlab</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Linux</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Introduction to Cybersecurity</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+                    <div class="skills-box">
+                        <div class="skills-title">
+                            <h2>Sensors and Measurement</h2>
+                        </div>
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Sensor / Measurement Chain</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">VA Sensors (radar, lidar, camera)</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Signal Processing (analog, digital)</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Sensor Data Fusion</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="700">
+                    <div class="skills-box">
+                        <div class="skills-title">
+                            <h2>Mechanical and Vehicle Dynamics</h2>
+                        </div>
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Solid Mechanics and Mechanical Systems</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Vehicle Dynamics</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Automotive Architecture</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
+                    <div class="skills-box">
+                        <div class="skills-title">
+                            <h2>Electricity and Electronics</h2>
+                        </div>
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Electricity</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Digital Electronics</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="900">
+                    <div class="skills-box">
+                        <div class="skills-title">
+                            <h2>Automotive Technologies</h2>
+                        </div>
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Automotive Engine Technologies / New Powertrains: Hybridization
+                                and Electrification, Hydrogen</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Automotive Functional Safety (Reliability)</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Embedded Systems (CAN and FLEXRAY)</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Multiphysics Modeling</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Modeling and Code Generation and Testing</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Advanced Multiphysical Systems Modeling (Actuators)</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">IoT (communication infrastructure/inter-vehicle)</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">IoT (communication infrastructure/inter-vehicle)</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000">
+                    <div class="skills-box">
+                        <div class="skills-title">
+                            <h2>AI and Machine Learning </h2>
+                        </div>
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">AI: Machine Learning, Deep Learning, Reinforcement Learning</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">ADAS (Advanced Driver Assistance Systems)</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1200">
+                    <div class="skills-box">
+                        <div class="skills-title">
+                            <h2>Other Skills</h2>
+                        </div>
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Big Data (Introduction to Data Storage, Finding Parking Spaces)
+                            </h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Cybersecurity</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">Microcontroller: Electronics for Embedded Calculators and
+                                Software</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progressbar-item">
+                            <h4 class="progress-title">AUTOSAR (Embedded System Design Standard)</h4>
+                            <div progress-bar data-percentage="100%">
+                                <div class="progress-number">
+                                    <div class="progress-number-mark">
+                                        <span class="percent"></span>
+                                        <span class="down-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="progress-bg">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-        </footer>
+        </div>
+    </section>
+    <!-- End Skills Section -->
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Start Portfolio Section -->
+    <section id="portfolio" class="bx-portfolio-section bx-section portfolio padding-tb-80">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="title" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                    <h2>My <span class="primary-clr">Portfolio</span></h2>
+                </div>
+            </div>
+            <!-- Start Row 2 Column -->
+             <div class="row">
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                    <div class="portfolio-box">
+                        <div class="portfolio-img">
+                            <img src="assets/img/portfolio/img-1.jpg" alt="">
+                        </div>
+                        <h2>Exquisite Responsiveness</h2>
+                        <p>Switch effortlessly between light and dark themes to.</p>
+                        <div class="portfolio-skills">
+                            <span>html & css</span> <span>vue js</span> <span>node js</span> <span>php</span>
+                        </div>
+                        <div class="portfolio-btn mt-3 mb-4">
+                            <a href="#"> <i class="fa-brands fa-github"> </i> Voir sur GitHub</a>
+                        </div>
+                   </div>
+                </div>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $('.about__video-carousel').slick({
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: true,
-                    prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-                    nextArrow: '<button type="button" class="slick-next">Next</button>',
-                    autoplay: false,
-                    autoplaySpeed: 2000
-                });
-            });
-        </script>
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
+                    <div class="portfolio-box">
+                        <div class="portfolio-img">
+                            <img src="assets/img/portfolio/img-2.jpg" alt="">
+                        </div>
+                        <h2>Exquisite Responsiveness</h2>
+                        <p>Switch effortlessly between light and dark themes to.</p>
+                        <div class="portfolio-skills">
+                            <span>html & css</span> <span>vue js</span> <span>node js</span> <span>php</span>
+                        </div>
+                        <div class="portfolio-btn mt-3 mb-4">
+                            <a href="#"> <i class="fa-brands fa-github"> </i> Voir sur GitHub</a>
+                        </div>
+                   </div>
+                </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script>
-            /*chatgpt*/
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+                    <div class="portfolio-box">
+                        <div class="portfolio-img">
+                            <img src="assets/img/portfolio/img-3.jpg" alt="">
+                        </div>
+                        <h2>Exquisite Responsiveness</h2>
+                        <p>Switch effortlessly between light and dark themes to.</p>
+                        <div class="portfolio-skills">
+                            <span>html & css</span> <span>vue js</span> <span>node js</span> <span>php</span>
+                        </div>
+                        <div class="portfolio-btn mt-3 mb-4">
+                            <a href="#"> <i class="fa-brands fa-github"> </i> Voir sur GitHub</a>
+                        </div>
+                   </div>
+                </div>
 
-            // Fonction pour envoyer la question à l'API et afficher la réponse
-            function sendQuestion() {
-                // Récupérer la question de l'utilisateur depuis l'input
-                
-                const question = document.getElementById("user-input").value;
-                const chatBox = document.getElementById("chat-box");
-            
-                const config = {
-                    headers: {
-                    "x-api-key": "sec_bTXMrSoX6Aa62uuQEHS7hzdSgFQuBryj}",
-                    "Content-Type": "application/json",
-                    },
-                };
-                // Envoyer la question à l'API ChatPDF
-                const data = {
-                    sourceId: "src_1ynK07gtYOoaCVTqaFlQq", 
-                    messages: [
-                        {
-                            role: "user",
-                            content: question,
-                        },
-                    ],
-                };
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="700">
+                    <div class="portfolio-box">
+                        <div class="portfolio-img">
+                            <img src="assets/img/portfolio/img-4.jpg" alt="">
+                        </div>
+                        <h2>Exquisite Responsiveness</h2>
+                        <p>Switch effortlessly between light and dark themes to.</p>
+                        <div class="portfolio-skills">
+                            <span>html & css</span> <span>vue js</span> <span>node js</span> <span>php</span>
+                        </div>
+                        <div class="portfolio-btn mt-3 mb-4">
+                            <a href="#"> <i class="fa-brands fa-github"> </i> Voir sur GitHub</a>
+                        </div>
+                   </div>
+                </div>
 
-                axios
-                .post("https://api.chatpdf.com/v1/chats/message", data, config)
-                .then((response) => {
-                    // Afficher la réponse dans le chat-box
-                    chatBox.innerHTML += `<div class="bot-message">${response.data.content}</div>`;
-                })
-                .catch((error) => {
-                    console.error("Erreur:", error.message);
-                });
-            }
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
+                    <div class="portfolio-box">
+                        <div class="portfolio-img">
+                            <img src="assets/img/portfolio/img-5.jpg" alt="">
+                        </div>
+                        <h2>Exquisite Responsiveness</h2>
+                        <p>Switch effortlessly between light and dark themes to.</p>
+                        <div class="portfolio-skills">
+                            <span>html & css</span> <span>vue js</span> <span>node js</span> <span>php</span>
+                        </div>
+                        <div class="portfolio-btn mt-3 mb-4">
+                            <a href="#"> <i class="fa-brands fa-github"> </i> Voir sur GitHub</a>
+                        </div>
+                   </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="900">
+                    <div class="portfolio-box">
+                        <div class="portfolio-img">
+                            <img src="assets/img/portfolio/img-6.jpg" alt="">
+                        </div>
+                        <h2>Exquisite Responsiveness</h2>
+                        <p>Switch effortlessly between light and dark themes to.</p>
+                        <div class="portfolio-skills">
+                            <span>html & css</span> <span>vue js</span> <span>node js</span> <span>php</span>
+                        </div>
+                        <div class="portfolio-btn mt-3 mb-4">
+                            <a href="#"> <i class="fa-brands fa-github"> </i> Voir sur GitHub</a>
+                        </div>
+                   </div>
+                </div>
+             </div>
+
+                <!-- Strat Diploma Section -->
+                <div class="row mt-5">
+                    <div class="title" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                        <h2>My <span class="primary-clr">Diploma</span></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="700">
+                        <div class="portfolio-item">
+                            <div class="port-card">
+                                <div class="port-img"><img class="w-100" src="assets/img/portfolio/img-7.jpg" alt="portfolio"></div>
+                                <div class="port-oly">
+                                    <div class=port-btn>
+                                        <a class="btn btn-inline" data-fancybox="gallery"
+                                            href="assets/img/portfolio/img-7.jpg"><i class="fa-regular fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
+                        <div class="portfolio-item">    
+                            <div class="port-card">
+                                <div class="port-img"><img class="w-100" src="assets/img/portfolio/img-8.jpg" alt="portfolio"></div>
+                                <div class="port-oly">
+                                    <div class=port-btn>
+                                        <a class="btn btn-inline" data-fancybox="gallery"
+                                            href="assets/img/portfolio/img-8.jpg"><i class="fa-regular fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
+                        <div class="portfolio-item">    
+                            <div class="port-card">
+                                <div class="port-img"><img class="w-100" src="assets/img/portfolio/img-8.jpg" alt="portfolio"></div>
+                                <div class="port-oly">
+                                    <div class=port-btn>
+                                        <a class="btn btn-inline" data-fancybox="gallery"
+                                            href="assets/img/portfolio/img-8.jpg"><i class="fa-regular fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
+                        <div class="portfolio-item">    
+                            <div class="port-card">
+                                <div class="port-img"><img class="w-100" src="assets/img/portfolio/img-8.jpg" alt="portfolio"></div>
+                                <div class="port-oly">
+                                    <div class=port-btn>
+                                        <a class="btn btn-inline" data-fancybox="gallery"
+                                            href="assets/img/portfolio/img-8.jpg"><i class="fa-regular fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
+                        <div class="portfolio-item">    
+                            <div class="port-card">
+                                <div class="port-img"><img class="w-100" src="assets/img/portfolio/img-8.jpg" alt="portfolio"></div>
+                                <div class="port-oly">
+                                    <div class=port-btn>
+                                        <a class="btn btn-inline" data-fancybox="gallery"
+                                            href="assets/img/portfolio/img-8.jpg"><i class="fa-regular fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+
+                    <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
+                        <div class="portfolio-item">    
+                            <div class="port-card">
+                                <div class="port-img"><img class="w-100" src="assets/img/portfolio/img-8.jpg" alt="portfolio"></div>
+                                <div class="port-oly">
+                                    <div class=port-btn>
+                                        <a class="btn btn-inline" data-fancybox="gallery"
+                                            href="assets/img/portfolio/img-8.jpg"><i class="fa-regular fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Diploma Section -->
+        </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    <!-- Start Contact us Section -->
+    <section id="contact" class="bx-contact-section bx-section contact padding-tb-80 body-bg">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="title" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                    <h2>Contact<span class="primary-clr"> Us</span></h2>
+                </div>
+            </div>
+            <div class="col-12 mb-20" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-item">
+                            <div class="inner-contact">
+                                <span><i class="fa fa-phone"></i></span>
+                                <h6>Call Me</h6>
+                            </div>
+                            <div class="info-cont">
+                                <p> <a href="tel:06.19.36.75.12">06.19.36.75.12</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="inner-contact">
+                                <span><i class="fa fa-envelope"></i></span>
+                                <h6>Email</h6>
+                            </div>
+                            <div class="info-cont">
+                                <p> <a href="mailto:quentinlandon18@gmail.com">quentinlandon18@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="inner-contact">
+                                <span><i class="fa fa-location-arrow"></i></span>
+                                <h6>Address</h6>
+                            </div>
+                            <div class="info-cont">
+                                <p>France, Paris / Strasbourg
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
+                        <form id="my-form" class="form">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="Name" placeholder="Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="Email" name="Email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="Subject" placeholder="Subject" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="Message" placeholder="Your Message Here " required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Button Send Message  -->
+                            <button type="submit" value="submit" class="btn-one">Send</button>
+                        </form>
+
+                        <div class="pt-4" id="my-form-status"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact us Section -->
 
 
-        </script>
-        
-    </body>
+
+    <!-- Start Footer -->
+    <footer class="footer bg-clr">
+        <div class="container">
+            <div class="bx-footer-detail">
+                <div class="bx-copy text-center">
+                    Copyright &copy;
+                    <a class="site-name" href="index.html">Quentin Landon
+                    </a>
+                    all rights reserved.
+                </div>
+                <!-- <div class="bx-privacy">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#achievements">Achievements</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Page Scroll Top -->
+    <div id="scrollup">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </div>
+
+    <!-- Plugins JS -->
+    <script src="assets/js/plugins/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/jquery.fancybox.min.js"></script>
+    <script src="assets/js/plugins/mixitup.min.js"></script>
+    <script src="assets/js/plugins/aos.min.js"></script>
+    <script src="assets/js/plugins/owl.carousel.min.js"></script>
+    <!-- Main Js -->
+    <script src="assets/js/main.js"></script>
+</body>
 </html>

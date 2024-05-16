@@ -1,128 +1,166 @@
-/*===== MENU SHOW =====*/ 
-const showMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+  // progress bar
+// Animated Prograssbar
+$("[progress-bar]").each(function () {
+  $(this)
+      .find(".progress-fill")
+      .animate(
+      {
+          width: $(this).attr("data-percentage"),
+      },
+      2000
+      );
 
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
+  $(this)
+      .find(".progress-number-mark")
+      .animate(
+      { left: $(this).attr("data-percentage") },
+      {
+          duration: 1000,
+          step: function (now, fx) {
+          var data = Math.round(now);
+          $(this)
+              .find(".percent")
+              .html(data + "%");
+          },
+      }
+      );
+  });
+/*----------------------------- Site Loader & Popup --------------------*/
+$(window).on("load", function () { 
+  $("#bx-overlay").fadeOut("slow"); 
+});
+$(document).ready(function () {
+    "use strict";
+  /*----------------------------- Scroll Up Button --------------------- */
+  var btn = $('#scrollup');
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
     }
-}
-showMenu('nav-toggle','nav-menu')
-
-/*===== REMOVE MENU MOBILE =====*/
-const navLink = document.querySelectorAll('.nav__link')
-
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
-/*===== SCROLL SECTIONS ACTIVE LINK =====*/
-const sections = document.querySelectorAll('section[id]')
-
-window.addEventListener('scroll', scrollActive)
-
-function scrollActive(){
-    const scrollY = window.pageYOffset
-
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
-
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
-        }
-    })
-}
-
-/*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 2000,
-    reset: true
-})
-
-/*SCROLL HOME*/
-sr.reveal('.home__title', {})
-sr.reveal('.home__scroll', {delay: 200})
-sr.reveal('.home__img', {origin:'right', delay: 400})
-
-/*SCROLL ABOUT*/
-sr.reveal('.about__img', {delay: 500})
-sr.reveal('.about__subtitle', {delay: 300})
-sr.reveal('.about__profession', {delay: 400})
-sr.reveal('.about__text', {delay: 500})
-sr.reveal('.about__social-icon', {delay: 600, interval: 200})
-
-/*SCROLL SKILLS*/
-sr.reveal('.skills__subtitle', {})
-sr.reveal('.skills__name', {distance: '20px', delay: 50, interval: 100})
-sr.reveal('.skills__img', {delay: 400})
-
-/*SCROLL PORTFOLIO*/
-sr.reveal('.portfolio__img', {interval: 200})
-
-/*SCROLL CONTACT*/
-sr.reveal('.contact__subtitle', {})
-sr.reveal('.contact__text', {interval: 200})
-sr.reveal('.contact__input', {delay: 400})
-sr.reveal('.contact__button', {delay: 600})
-
-
-/*LOGO*/
-
-const scrollers = document.querySelectorAll(".scroller");
-
-// If a user hasn't opted in for recuded motion, then we add the animation
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  addAnimation();
-}
-
-function addAnimation() {
-  scrollers.forEach((scroller) => {
-    // add data-animated="true" to every `.scroller` on the page
-    scroller.setAttribute("data-animated", true);
-
-    // Make an array from the elements within `.scroller-inner`
-    const scrollerInner = scroller.querySelector(".scroller__inner");
-    const scrollerContent = Array.from(scrollerInner.children);
-
-    // For each item in the array, clone it
-    // add aria-hidden to it
-    // add it into the `.scroller-inner`
-    scrollerContent.forEach((item) => {
-      const duplicatedItem = item.cloneNode(true);
-      duplicatedItem.setAttribute("aria-hidden", true);
-      scrollerInner.appendChild(duplicatedItem);
-    });
-  });
-}
-
-/*DIPLOMA */
-document.addEventListener('DOMContentLoaded', function () {
-    var modals = document.querySelectorAll('.modal');
-    var thumbnails = document.querySelectorAll('.thumbnail');
-    var closeButtons = document.querySelectorAll('.close');
-  
-    thumbnails.forEach(function (thumbnail, index) {
-      thumbnail.addEventListener('click', function () {
-        modals[index].style.display = 'block';
-      });
-    });
-  
-    closeButtons.forEach(function (closeButton) {
-      closeButton.addEventListener('click', function () {
-        modals.forEach(function (modal) {
-          modal.style.display = 'none';
-        });
-      });
-    });
   });
   
+  btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+
+  /*--------------------- Aos animation on scroll --------------------*/
+  AOS.init({
+    once: true
+  });
+
+  /*-------------------- Potfolio for Mixit up --------------------*/
+  var portfolioContent = $('.portfolio-content');
+		portfolioContent.mixItUp();
+
+  /*--------------------- On click menu scroll section to section -------------------------------- */
+  // Cache selectors
+    var lastId,
+    topMenu = $("#top-menu"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+    // Bind click handler to menu items
+    // so we can get a fancy scroll animation
+    menuItems.click(function(e){
+    var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+    $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+    }, 300);
+    e.preventDefault();
+    });
+
+    // Bind to scroll
+    $(window).scroll(function(){
+    // Get container scroll position
+    var fromTop = $(this).scrollTop()+topMenuHeight;
+
+    // Get id of current scroll item
+    var cur = scrollItems.map(function(){
+    if ($(this).offset().top < fromTop)
+      return this;
+    });
+    // Get the id of the current element
+    cur = cur[cur.length-1];
+    var id = cur && cur.length ? cur[0].id : "";
+
+    if (lastId !== id) {
+      lastId = id;
+      // Set/remove active class
+      menuItems
+        .parent().removeClass("active")
+        .end().filter("[href='#"+id+"']").parent().addClass("active");
+    }                   
+  });
+
+  /*--------------------- Scroll to fixed navigation bar -------------------------------- */
+  $(function() {
+		var header = $(".bx-static");
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();
+		
+			if (scroll >= 10) {
+				header.removeClass('bx-static').addClass("bx-fixed");
+			} else {
+				header.removeClass("bx-fixed").addClass('bx-static');
+			}
+		});
+	});
+
+  /*--------------------- News carousel -------------------------------- */
+    $('.owl-theme').owlCarousel({
+      autoplay: true,
+      loop: true,
+      dots:false,
+      items: 10,
+      margin:24,
+      slideTransition: 'linear',
+      autoplayTimeout: 1000,
+      autoplaySpeed: 2000,
+      autoplayHoverPause: false,
+      responsive: {
+          0: {
+              items: 2,
+              nav: false
+          },
+          400: {
+              items: 3,
+              nav: false
+          },
+          576: {
+              items: 5,
+              nav: false
+          },
+          768: {
+              items: 8,
+              nav: false
+          },
+      }
+  });
+ 
+
+
+
+    /*--------------------- parallaxmouse JS -------------------------------- */
+  $(window).parallaxmouse({
+    invert: true,
+    range: 400,
+    elms: [
+        { el: $('#shape1'), rate: 0.2 },
+        { el: $('#shape2'), rate: 0.2 },
+        { el: $('#shape4'), rate: 0.3 },
+        { el: $('#shape5'), rate: 0.2 },
+        { el: $('#shape3'), rate: 0.12 },
+    ]
+});
+});
