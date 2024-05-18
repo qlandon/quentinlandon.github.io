@@ -881,10 +881,9 @@ header form .fa-solid {
 }
 .header-chatbot-form{
   margin-top: 20px;
-  align-items: center;
 }
 .header-chatbot-form .search {
-  width:45%;
+  width:60%;
   position: relative;
   display: flex;
 }
@@ -895,6 +894,7 @@ header form .fa-solid {
   padding: 10px 10px;
   outline: none;
   color: var(--main-color);
+  text-align: center;
 }
 .header-chatbot-form .searchTerm:focus{
   color: var(--main-color);
