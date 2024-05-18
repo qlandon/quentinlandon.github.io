@@ -883,12 +883,12 @@ header form .fa-solid {
   margin-top: 20px;
 }
 .header-chatbot-form .search {
-  width: 100%;
+  width:50%;
   position: relative;
   display: flex;
 }
 .header-chatbot-form .searchTerm {
-  width:35%;
+  width:100%;
   border: 2px solid var(--main-color);
   border-radius: 10px 0 0 10px;
   padding: 10px 10px;
