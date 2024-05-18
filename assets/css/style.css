@@ -888,7 +888,7 @@ header form .fa-solid {
   display: flex;
 }
 .header-chatbot-form .searchTerm {
-  width: 50%;
+  width:35%;
   border: 2px solid var(--main-color);
   border-radius: 10px 0 0 10px;
   padding: 10px 10px;
