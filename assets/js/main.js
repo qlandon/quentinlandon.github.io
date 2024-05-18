@@ -164,7 +164,3 @@ $(document).ready(function () {
     ]
 });
 });
-/*--------------------- CV/LM -------------------------------- */
-function downloadCV() {
-  window.location.href = 'assets/img/about/Quentin_LANDON_CV.pdf';
-}
