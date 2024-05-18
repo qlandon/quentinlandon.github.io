@@ -881,9 +881,10 @@ header form .fa-solid {
 }
 .header-chatbot-form{
   margin-top: 20px;
+  align-items: center;
 }
 .header-chatbot-form .search {
-  width:50%;
+  width:45%;
   position: relative;
   display: flex;
 }
