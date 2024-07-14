@@ -1210,8 +1210,11 @@ img.about_flag {
 }
 
 .tab-content video {
-  width: 100%;
-  height: auto;
+  width: auto; /* La largeur s'ajuste automatiquement */
+  height: 100%; /* Prend toute la hauteur du conteneur parent */
+  max-height: 600px; /* Ajustez cette valeur selon votre besoin pour limiter la hauteur */
+  display: block;
+  margin: 0 auto; /* Centre la vidéo horizontalement */
   border-radius: 10px;
 }
 
