@@ -992,77 +992,75 @@
     <section id="contact" class="bx-contact-section bx-section contact padding-tb-80 body-bg">
         <div class="container">
             <div class="row mt-5">
-                <div class="title" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+                <div class="title text-center" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
                     <h2>Contact<span class="primary-clr"> Me</span></h2>
                 </div>
             </div>
-            <div class="col-12 mb-20" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="contact-item">
-                            <div class="inner-contact">
-                                <span><i class="fa fa-phone"></i></span>
-                                <h6>Call Me</h6>
-                            </div>
-                            <div class="info-cont">
-                                <p> <a href="tel:06.19.36.75.12">06.19.36.75.12</a></p>
-                            </div>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                    <div class="contact-item">
+                        <div class="inner-contact">
+                            <span><i class="fa fa-phone"></i></span>
+                            <h6>Call Me</h6>
                         </div>
-                        <div class="contact-item">
-                            <div class="inner-contact">
-                                <span><i class="fa fa-envelope"></i></span>
-                                <h6>Email</h6>
-                            </div>
-                            <div class="info-cont">
-                                <p> <a href="mailto:quentinlandon18@gmail.com">quentinlandon18@gmail.com</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="inner-contact">
-                                <span><i class="fa fa-location-arrow"></i></span>
-                                <h6>Address</h6>
-                            </div>
-                            <div class="info-cont">
-                                <p>France, Paris / Strasbourg
-                                </p>
-                            </div>
+                        <div class="info-cont">
+                            <p><a href="tel:06.19.36.75.12">06.19.36.75.12</a></p>
                         </div>
                     </div>
-                    <div class="col-md-8" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
-                        <form id="my-form" class="form">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="Name" placeholder="Name" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="Email" name="Email" placeholder="Email" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="Subject" placeholder="Subject" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <textarea name="Message" placeholder="Your Message Here " required></textarea>
-                                    </div>
+                    <div class="contact-item">
+                        <div class="inner-contact">
+                            <span><i class="fa fa-envelope"></i></span>
+                            <h6>Email</h6>
+                        </div>
+                        <div class="info-cont">
+                            <p><a href="mailto:quentinlandon18@gmail.com">quentinlandon18@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="inner-contact">
+                            <span><i class="fa fa-location-arrow"></i></span>
+                            <h6>Address</h6>
+                        </div>
+                        <div class="info-cont">
+                            <p>France, Paris / Strasbourg</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
+                    <form id="my-form" class="form" action="send_mail.php" method="POST">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="text" name="Name" placeholder="Name" required>
                                 </div>
                             </div>
-                            <!-- Button Send Message  -->
-                            <button type="submit" value="submit" class="btn-one">Send</button>
-                        </form>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="email" name="Email" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="text" name="Subject" placeholder="Subject" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea name="Message" placeholder="Your Message Here" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Button Send Message  -->
+                        <button type="submit" value="submit" class="btn-one">Send</button>
+                    </form>
 
-                        <div class="pt-4" id="my-form-status"></div>
-                    </div>
+                    <div class="pt-4" id="my-form-status"></div>
                 </div>
             </div>
         </div>
     </section>
     <!-- End Contact us Section -->
+
 
 
 
